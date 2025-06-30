@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio de Maria Silva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 30px 15px;
+    }
+
+    h1, h2, h3 {
+      color: #1e90ff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .descricao {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .descricao p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .projetos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .projeto {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fafafa;
+      transition: transform 0.3s ease;
+    }
+
+    .projeto:hover { transform: translateY(-5px); }
+    .projeto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .projeto-conteudo {
+      padding: 15px;
+    }
+
+    .projeto h3 { margin-bottom: 10px; font-size: 20px; }
+    .projeto p { font-size: 15px; margin-bottom: 10px; }
+
+    .projeto a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .lista { margin-bottom: 30px; }
+    .lista ul { list-style: square; padding-left: 20px; color: #444; }
+    .lista ul li { margin-bottom: 8px; }
+
+    .contato {
+      text-align: center;
+    }
+
+    .contato a {
+      margin: 10px;
+      text-decoration: none;
+      color: #1e90ff;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .voltar {
+      display: block;
+      margin-top: 50px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: #1e90ff;
+    }
+
+    .voltar:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .projetos { grid-template-columns: 1fr; }
+    }
+  
+    form {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0073e6;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Portfólio de Maria Silva</h1>
+    <div class="descricao">
+      <p>Sou estudante de desenvolvimento web, apaixonada por tecnologia e criação de soluções digitais.</p>
+    </div>
+
+    <h2>Projetos</h2>
+    <div class="projetos">
+      <div class="projeto">
+        <img src="imagens/projeto1.jpg" alt="Projeto 1">
+        <div class="projeto-conteudo">
+          <h3>Projeto 1: Site Responsivo</h3>
+          <p>Site institucional desenvolvido com HTML, CSS e responsividade para dispositivos móveis.</p>
+          <a href="#">🔗 Ver projeto</a>
+        </div>
+      </div>
+
+      <div class="projeto">
+        <img src="imagens/projeto2.jpg" alt="Projeto 2">
+        <div class="projeto-conteudo">
+          <h3>Projeto 2: Página de Contato</h3>
+          <p>Formulário com validação JavaScript e integração com back-end via PHP.</p>
+          <a href="#">🔗 Ver projeto</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lista">
+      <h2>Habilidades Técnicas</h2>
+      <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Git e GitHub</li>
+        <li>Responsividade e boas práticas</li>
+        <li>Figma e UX/UI</li>
+      </ul>
+    </div>
+
+    <div class="lista">
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li>Técnico em Desenvolvimento de Sistemas</li>
+        <li>ETEC - Escola Técnica Estadual</li>
+        <li>2023 – 2025</li>
+      </ul>
+    </div>
+
+    <div class="contato">
+      <h2>Contato</h2>
+      <a href="mailto:maria@email.com">✉️ maria@email.com</a>
+      <a href="#">🐱 GitHub</a>
+      <a href="#">💼 LinkedIn</a>
+      <a href="#">📸 Instagram</a>
+    </div>
+
+    <div class="contato">
+      <h2>Entre em Contato</h2>
+    
+      <form action="https://formsubmit.co/digiteseuemail.com" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto">
+    
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    
+
+    <a href="index.html" class="voltar">← Voltar ao Cartão de Perfil</a>
+  </div>
+</body>
+</html>
